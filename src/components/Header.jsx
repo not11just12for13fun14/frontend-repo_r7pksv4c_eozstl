@@ -1,18 +1,19 @@
 import React from 'react'
 import { Search, User, ShoppingBag } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 function Header() {
   return (
     <header className="sticky top-0 z-30 backdrop-blur-md bg-[#F9F8F6]/70 border-b border-black/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="font-serif tracking-[0.2em] text-lg sm:text-xl text-[#333333]">
+        <Link to="/" className="font-serif tracking-[0.2em] text-lg sm:text-xl text-[#333333]">
           LEVITZ
-        </a>
+        </Link>
 
         {/* Nav */}
         <nav className="hidden md:flex items-center gap-8 text-sm text-[#333333]/80">
-          <a href="#shop" className="hover:text-[#333333] transition-colors">Shop</a>
+          <Link to="/product/amante-diamond-ring" className="hover:text-[#333333] transition-colors">Shop</Link>
           <a href="#collections" className="hover:text-[#333333] transition-colors">Collections</a>
           <a href="#story" className="hover:text-[#333333] transition-colors">Our Story</a>
           <a href="#journal" className="hover:text-[#333333] transition-colors">Journal</a>

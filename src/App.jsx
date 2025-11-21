@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import Philosophy from './components/Philosophy'
 import Collections from './components/Collections'
 import ProductHighlight from './components/ProductHighlight'
+import ForHer from './components/ForHer'
 import TrustFooter from './components/TrustFooter'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Philosophy />
         <Collections />
         <ProductHighlight />
+        <ForHer />
         <TrustFooter />
       </main>
     </div>

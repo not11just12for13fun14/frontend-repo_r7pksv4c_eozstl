@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const collections = [
   {
@@ -11,7 +12,7 @@ const collections = [
   },
   {
     title: 'Modern Talismans',
-    image: 'https://images.unsplash.com/photo-1750622379075-e220b9dc9a54?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxNZWRpdGVycmFuZWFuJTIwRXNjYXBlfGVufDB8MHx8fDE3NjM3MjQyNTN8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1750622379075-e220b9dc9a54?ixid=M3w3OTkxMTl8MHwxfHNlYXJjaHwxfHxNZWRpdGVycmFuJTIwRXNjYXBlfGVufDB8MHx8fDE3NjM3MjQyNTN8MA&ixlib=rb-4.1.0&w=1600&auto=format&fit=crop&q=80',
   },
 ]
 
@@ -20,8 +21,8 @@ function Collections() {
     <section id="collections" className="py-8 sm:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-6">
-          {collections.map((col) => (
-            <a key={col.title} href="#shop" className="group relative overflow-hidden rounded-xl">
+          {collections.map((col, idx) => (
+            <Link key={col.title} to="/product/amante-diamond-ring" className="group relative overflow-hidden rounded-xl">
               <img
                 src={col.image}
                 alt={col.title}
@@ -32,7 +33,7 @@ function Collections() {
               <div className="absolute bottom-4 left-4 text-white">
                 <h3 className="font-serif text-2xl">{col.title}</h3>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
